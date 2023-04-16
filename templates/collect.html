@@ -1,0 +1,16 @@
+{% extends 'basic.html' %}
+
+{% block title %}Collect{% endblock title %}
+
+{% block body %}
+<h1>Collect Page</h1>
+
+{% comment %} start forms {% endcomment %}
+<form method="post" style="padding: 25px;">
+    {% csrf_token %}
+    {{form}}
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+{% comment %} end forms {% endcomment %}
+
+{% endblock body %}
